@@ -1,0 +1,33 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: rgb(66, 66, 66);
+}
+
+.header{
+  background-color: rgb(110, 110, 110);
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.blogamount{
+  float: right;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  background-color: lightgray;
+  margin-top:-40px;
+  margin-right: 200px;
+  padding: 3px;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+  opacity: 1; /* gör så att spinnerknapparna alltid visas */
+  height: 25px;
+  background-color: rgb (66, 66, 66);
+  color: rgb (66, 66, 66);
+}
