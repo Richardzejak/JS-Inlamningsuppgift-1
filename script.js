@@ -1,6 +1,6 @@
 let elementCount =0;
 let elementChange =0;
-
+let elementCreateId =1;
 
 document.getElementById("blogamount").addEventListener('change', setEqual);
 function setEqual(){
@@ -29,27 +29,31 @@ function setEqual(){
 }
 
 function createBlogInput(){
-  let blogInput = document.createElement("input");
-  blogInput.type="text";
-  blogInput.className = "blogInputClass";
-  blogInput.id = "box";
-  var parent = document.getElementById("bloginputcontainer");
-  parent.appendChild(blogInput);
+
+  elementCreateId++;
+
+  let flexContainer = document.createElement("flexbox-container");
+  flexContainer.className = "flexbox-container";
+  flexContainer.id = "flexbox-container-id"+elementCreateId;
+  var parent = document.getElementById("bloginputs");
+  parent.appendChild(flexContainer);
+
+  let titleInput = document.createElement("Input");
+    titleInput.value = "Title"+(elementCreateId-1);
+  titleInput.type="text";
+  titleInput.className = "titleInputClass";
+  var parent = document.getElementById("flexbox-container-id"+elementCreateId);
+  parent.appendChild(titleInput);
+
+  let smallTextInput = document.createElement("Input");
+  smallTextInput.value = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum, quasi dicta ex totam quisquam quo tempore maxime, commodi praesentium eius quod suscipit! Tenetur magnam eligendi amet fugiat adipisci impedit.";
+  smallTextInput.type="text";
+  smallTextInput.className = "textInputClass";
+  var parent = document.getElementById("flexbox-container-id"+elementCreateId);
+  parent.appendChild(smallTextInput);
 }
 
 function removeBlogInput(){
-var lastCreatedElement = document.getElementById("box");
-lastCreatedElement.remove();
+document.getElementById("flexbox-container-id"+elementCreateId).remove();
+elementCreateId--;
 }
-
-/* function addElement () {
-   const newDiv = document.createElement("div");
-   const newContent = document.createTextNode("Hey hey");
-
-   newDiv.appendChild(newContent);
-
-   const currentDiv = document.getElementById("div1");
-   document.body.insertBefore(newDiv, currentDiv);
-
-   elementCount++;
- }*/

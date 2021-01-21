@@ -25,6 +25,19 @@ body{
   padding: 3px;
 }
 
+.flexbox-container{
+  display: flex;
+  background-color: lightgray;
+  flex-direction: column;
+  max-width: 100px;
+}
+
+.textInputClass{
+  height: 100px;
+  background-color: lightgray;
+
+}
+
 ::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
   opacity: 1; /* gör så att spinnerknapparna alltid visas */
   height: 25px;
