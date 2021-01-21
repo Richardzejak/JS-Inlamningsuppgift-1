@@ -7,10 +7,6 @@ body{
   background-color: rgb(66, 66, 66);
 }
 
-.flex-container{
-  display: flex;
-}
-
 .header{
   background-color: rgb(110, 110, 110);
   text-align: center;
