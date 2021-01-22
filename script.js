@@ -32,28 +32,29 @@ function createBlogInput(){
 
   elementCreateId++;
 
-  let flexContainer = document.createElement("flexbox-container");
-  flexContainer.className = "flexbox-container";
-  flexContainer.id = "flexbox-container-id"+elementCreateId;
-  var parent = document.getElementById("bloginputs");
-  parent.appendChild(flexContainer);
+ let div = document.createElement("div");
+  div.id = "div"+elementCreateId;
+  var parent = document.getElementById("box-container-id");
+  parent.appendChild(div);
 
   let titleInput = document.createElement("Input");
-    titleInput.value = "Title"+(elementCreateId-1);
+  titleInput.value = "Title"+(elementCreateId-1);
   titleInput.type="text";
   titleInput.className = "titleInputClass";
-  var parent = document.getElementById("flexbox-container-id"+elementCreateId);
+  titleInput.id = "titleInputId";
+  var parent = document.getElementById("div"+elementCreateId);
   parent.appendChild(titleInput);
 
-  let smallTextInput = document.createElement("Input");
+  let smallTextInput = document.createElement("textarea");
   smallTextInput.value = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum, quasi dicta ex totam quisquam quo tempore maxime, commodi praesentium eius quod suscipit! Tenetur magnam eligendi amet fugiat adipisci impedit.";
   smallTextInput.type="text";
   smallTextInput.className = "textInputClass";
-  var parent = document.getElementById("flexbox-container-id"+elementCreateId);
+  smallTextInput.id = "smallTextInputId";
+  var parent = document.getElementById("div"+elementCreateId);
   parent.appendChild(smallTextInput);
 }
 
 function removeBlogInput(){
-document.getElementById("flexbox-container-id"+elementCreateId).remove();
+document.getElementById("div"+elementCreateId).remove();
 elementCreateId--;
 }
